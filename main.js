@@ -112,15 +112,15 @@ app.get('/viewcustomers',(req,res) => {
 app.get('/bookings/:customerName', (req, res) => {
     const { customerName } = req.params;
   
-    // Filter the bookings based on the customer name
+    // Filter  bookings based on  customer name
     const customerBookings = bookings.filter(
       booking => booking.customerName === customerName
     );
   
-    // Get the count of bookings
+    // Get  count of bookings
     const bookingCount = customerBookings.length;
   
-    // Send the response
+    // Send  response
     res.json({ customerBookings, bookingCount });
   });
 
